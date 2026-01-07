@@ -9,7 +9,7 @@ genai.configure(
     api_key=os.getenv("GEMINI_API_KEY")
 )
 
-model = genai.GenerativeModel("gemma-3-12b-it")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 def generate_text(prompt: str) -> str:
     response = model.generate_content(prompt)

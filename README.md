@@ -57,3 +57,8 @@ venv\Scripts\activate     # Windows
 docker build -t crm-app .
 docker run -p 9000:9000 --env-file .env crm-app
 ```
+
+## Demo
+
+![CRM Message Generator](assets/0108.gif)
+_메시지 생성 시연_
