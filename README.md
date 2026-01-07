@@ -1,2 +1,49 @@
-# crm_message_generator
-이 프로젝트는 아모레퍼시픽 홈페이지에 올라와 있는 제품을 바탕으로 고객 성향에 맞게 제품 추천과 메세지를 자동 생성하여 마케팅 담당자에 메시지 생성 업무를 자동화한다.
+# CRM Message Generator
+
+고객 페르소나 기반 제품 추천 및 마케팅 메시지를 생성하는 **Streamlit 데모 프로젝트**입니다.  
+이 프로젝트는 **화장품 CRM 공모전을 염두에 두고 설계**되었지만, 독립적인 학습/포트폴리오용 프로젝트입니다.
+
+---
+
+## Features
+
+- 고객 페르소나 분석
+- 임베딩 기반 제품 Top-K 추천
+- 브랜드 톤 가이드 반영 마케팅 메시지 생성
+- Streamlit UI를 통한 간단한 인터랙션
+- Docker 기반 실행 환경
+
+---
+
+## Dataset
+
+모든 데이터셋은 **데모용으로 직접 제작**한 샘플 데이터입니다.  
+실제 고객 데이터를 포함하지 않습니다.
+
+- `data/Brand_tone_guide.csv` : 브랜드 톤 가이드
+- `data/product.xlsx` : 제품 목록
+- `data/고객_페르소나.csv` : 고객 페르소나
+- `data/persona_signals.json` : 페르소나 시그널 정보
+
+---
+
+## Run Locally (Streamlit)
+
+1. 가상환경 활성화
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux / Mac
+venv\Scripts\activate     # Windows
+```
+
+2. 의존성 설치
+   pip install -r requirements.txt
+
+3. Steamlit 실행
+   streamlit run test.py --server.port 9000
+
+## Run with Docker
+
+docker build -t crm-app .
+docker run -p 9000:9000 --env-file .env crm-app
