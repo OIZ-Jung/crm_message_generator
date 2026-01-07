@@ -24,6 +24,8 @@
 - `data/product.xlsx` : 제품 목록
 - `data/고객_페르소나.csv` : 고객 페르소나
 - `data/persona_signals.json` : 페르소나 시그널 정보
+- `data/라이프스타일_취향_소비패턴목록.pdf` : persona_signals.json 변환 전 원문
+- `data/브랜드.csv` : Brand_tone_guide.csv 변환 전 원문
 
 ---
 
@@ -38,12 +40,20 @@ venv\Scripts\activate     # Windows
 ```
 
 2. 의존성 설치
+
+```bash
    pip install -r requirements.txt
+```
 
 3. Steamlit 실행
+
+```bash
    streamlit run test.py --server.port 9000
+```
 
 ## Run with Docker
 
+```bash
 docker build -t crm-app .
 docker run -p 9000:9000 --env-file .env crm-app
+```
