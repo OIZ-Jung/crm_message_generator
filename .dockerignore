@@ -1,0 +1,28 @@
+# 1. 가상환경 (도커 안에서 새로 설치하므로 절대 복사 금지)
+venv/
+.venv/
+env/
+
+# 2. 파이썬 임시 파일 (찌꺼기 파일들)
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 3. 환경 변수 및 비밀 파일 (보안 핵심!)
+.env
+*.key
+secrets.toml
+
+# 4. 소스 관리 및 설정 파일
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# 5. 도커 관련
+Dockerfile
+.dockerignore
+
+# 6. 기타 로그 및 임시 데이터
+*.log
