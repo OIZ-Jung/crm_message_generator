@@ -1,0 +1,1 @@
+# Amore_crm_generator
