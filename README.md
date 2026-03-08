@@ -5,6 +5,11 @@
 
 ---
 
+# Diagram
+![Diagram](assets/Diagram.png)
+
+---
+
 ## Features
 
 - 고객 페르소나 분석
